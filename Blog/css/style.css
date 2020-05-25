@@ -1,0 +1,211 @@
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: #222;
+}
+
+a {
+    /* TODO: remove underline from hyperlinks (1 property) */
+    color: #222;
+    text-decoration: none;
+}
+/* TODO: when you hover on a link, make the font colour black (selector + 1 property) */
+a:hover {
+    color: black;
+}
+/* TODO: give all images a maximum width of 100% so they'll resize on all viewports (selectory + 1 property) */
+img {
+    max-width: 100%;
+}
+.container  {
+    max-width: 880px;
+    margin: auto;
+	/* TODO: use property "margin" to center (1 property) */
+}
+
+/* ----- sticky header -------------------------------------------------- */
+#sticky-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid #eee;
+    background-color: #fff;
+    height: 50px;
+}
+#sticky-header .container {
+    /* TODO: set display to flex and make all flex items vertically center (2 properties) */
+    display: flex;
+    align-items: center;
+
+}
+
+/* main nav */
+#main-nav {
+    flex: 1;
+}
+#main-nav li {
+    display: inline-block;
+    position: relative;
+}
+#main-nav a {
+    font-size: 14px;
+    color: #555;
+    display: block;
+    line-height: 49px;
+    padding: 0 10px;
+}
+#main-nav a:hover {
+    color: #000;
+}
+/* TODO: when hyperlink in main nav has class "active" the colour should be #f47e00 (selector + 1 property) */
+#main-nav a.active {
+    color: #f47e00;
+}
+/* TODO: hyperlink of first list item in main nav should have no spacing on the left (selector + 1 property) */
+#main-nav li:first-child a {
+    padding-left: 0;
+}
+/* main sub nav */
+#main-nav ul.subnav {
+    /* TODO: don't want to see the subnav unless user hovers over parent item (1 property) */
+    display: none;
+	/* TODO: subnav should be absolutely position relative to the parent item, 50px from the top, 0px from the left (3 properties) */
+    position: absolute;
+    top: 50px;
+    left: 0px;
+    min-width: 175px;
+    border: 1px solid #eee;
+    background-color: #fff;
+}
+#main-nav ul.subnav li {
+    display: block;
+}
+#main-nav ul.subnav a {
+    display: block;
+    padding: 7px 14px;
+    font-size: 13px;
+    line-height: 22px;
+}
+#main-nav ul.subnav a:hover {
+    color: #444;
+    background-color: #f4f4f4
+}
+
+/* display sub nav */
+#main-nav li:hover ul.subnav {
+    /* TODO: display subnav (1 property) */
+    display: block;
+}
+
+/* social icons */
+#social-icons {
+    font-size: 14px;
+}
+#social-icons a {
+    margin-left: 12px;
+}
+
+
+
+/* ----- header -------------------------------------------------- */
+header {
+    padding-top: 90px;
+}
+header h1 a {
+    display: inline-block;
+	/* TODO: use background image writing-logo.png (1 property) */
+    width: 124px;
+    height: 32px;
+    text-indent: -9999em;
+    background-image: url("../images/writing-logo.png");
+}
+    
+
+
+/* ----- main -------------------------------------------------- */
+main {
+    padding-top: 40px;
+    padding-bottom: 80px;
+}
+
+
+
+/* ----- posts -------------------------------------------------- */
+article {
+	/* TODO: at the BOTTOM of every article: have 40px space above border, 1px dotted border of #ddd, 35px space below border (3 properties) */
+    padding-bottom: 40px;
+    border-bottom: 1px dotted #ddd;
+    margin-bottom: 35px;
+    
+}
+.thumb {
+    border-radius: 10px;
+    overflow: hidden;
+}
+article header, .excerpt {
+	/* TODO: width should be 95% but to a maximum of 710px (2 properties) */
+    margin: 0 auto;
+    width: 95%;
+    max-width: 710px;
+}
+/* TODO: the header in articles has too much whitespace above (thanks line 97), change to 20px (selector + 1 property) */
+article header {
+    padding-top: 20px;
+}
+h2 {
+    font-size: 23px;
+    margin-bottom: 2px;
+    letter-spacing: 0.8px;
+    line-height: 32px;
+}
+p {
+	/* TODO: 14px font size, 26px line height, use "margin" for 14px space above and below (3 properties) */
+    font-size: 14px;
+    line-height: 25px;
+    margin: 14px 0;
+}
+.excerpt a {
+    font-size: 15px;
+    display: inline-block;
+    height: 38px;
+    line-height: 38px;
+    padding: 0 22px;
+    border: 1px solid #f47e00;
+    border-radius: 30px;
+	/* TODO: 1px solid border of #f47e00 with radius of 30px (2 properties) */
+}
+/* TODO: when you hover on an .excerpt link, make the font colour white and background the same colour as the border (selector + 2 property) */
+.excerpt a:hover {
+    color: white;
+    background-color: #f47e00;
+}
+
+
+/* ----- pagination -------------------------------------------------- */
+#pagination li {
+    /* TODO: display in a row (1 property) */
+    display: inline;
+}
+#pagination a {
+    color: #333;
+    text-align: center;
+    display: inline-block;
+	/* TODO: make height, width and line height 36px (3 properties) */
+    height: 36px;
+    width: 36px;
+    line-height: 36px;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+}
+#pagination a.active, #pagination a:hover {
+    border-color: #f47e00;
+}
+
+
+
+/* ----- footer -------------------------------------------------- */
+footer {
+    /* TODO: 2px solid top border of #efefef, 50px above and below footer content (2 properties) */
+    border-top: 2px solid #efefef;
+    padding: 50px 0;
+}
